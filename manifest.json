@@ -3,12 +3,12 @@
     "short_name": "HappyNitro",
     "icons": [
         {
-            "src": "assets/img/logo-192.png",
+            "src": "assets/img/smile.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "assets/img/logo-512.png",
+            "src": "assets/img/smile.png",
             "sizes": "512x512",
             "type": "image/png"
         }
