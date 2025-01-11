@@ -1,0 +1,42 @@
+.spin {
+    margin: 10px;
+    min-width: 400px;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 300px;
+  }
+  
+  .spin img {
+    transition: all 1.5s;
+    box-sizing: border-box;
+    max-width: 100%;
+  
+  }
+  
+  .spin:hover img {
+    transform: scale(1.5) rotate(350deg);
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+  }
+
+
+
+/* 
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html"><center><figure class="spin"><img src="assets/img/logo.png" height="250" width="250"/></figure></center></a>
+
+</body>
+<link rel="stylesheet" href="assets/css/spin.css">
+
+</html>

@@ -1,0 +1,186 @@
+body {
+    background-color: black;
+    color: #d400ff;
+    
+
+}
+
+/* text-shadow: 0 0 10px #003cff, 0 0 20px #0066ff, 0 0 30px #0064e6, 0 0 40px #018fee, 0 0 50px #0191f1, 0 0 60px #0099ff, 0 0 70px #0099ff; */
+
+
+h1 {
+  color: #d400ff;
+  text-shadow: 0 0 10px #003cff, 0 0 20px #0066ff, 0 0 30px #0064e6;
+
+
+}
+
+p {
+  font-size: 25px;
+  color: #d400ff;
+  text-shadow: 0 0 10px #003cff, 0 0 20px #0066ff, 0 0 30px #0064e6;
+
+  
+
+}
+
+p:hover.link {
+  color: #1eff00;
+  text-shadow: 0 0 10px #1eff00, 0 0 20px #37ff00, 0 0 30px #0ce600, 0 0 40px #11ee01;
+
+}
+
+.front {
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.img {
+  border-style: hidden;
+  background-color: #000436;
+  width: 15%;
+  left: -5px;
+  bottom: -5px;
+}
+
+.img:hover {
+  border-style: hidden;
+  background-color: #000436;
+
+}
+
+.update {
+    color: #d400ff;
+    font-size: 18px;
+    border-style: hidden;
+    width: 14%;
+
+}
+
+.update:hover {
+  color:#1eff00;
+    font-size: 18px;
+    text-shadow: 0 0 10px #1eff00, 0 0 20px #37ff00, 0 0 30px #0ce600, 0 0 40px #11ee01;
+    border-style: hidden;
+}
+
+
+a {
+    color: #d400ff;
+    font-size: small;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-color: #4400ff;
+    border-style: solid;
+    position: relative;
+    width: 24%;
+
+}
+
+a:hover {
+  color:#1eff00;
+  border: #1eff00;
+  border-style: solid;
+  text-shadow: 0 0 10px #1eff00, 0 0 20px #37ff00, 0 0 30px #0ce600, 0 0 40px #11ee01;
+
+}
+
+
+
+
+@keyframes flicker {
+    from {
+      text-shadow:
+      0 0 5px blue,0 0 10px blue,
+      0 0 20px blue, 0 0 40px blue;
+    }
+    to {
+      text-shadow:
+      0 0 5px blue, 0 0 10px blue,
+      0 0 20px rgb(0, 183, 255), 0 0 40px rgb(0, 162, 255);
+    }
+  }
+  
+  .flick { animation: flicker 1s ease-in-out infinite alternate; }
+
+
+
+  .alert {
+    padding: 20px;
+      background-color: #000000;
+      color: rgb(9, 255, 0);
+      margin-bottom: 15px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      border: #1eff00;
+      border-style: solid;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: rgb(0, 255, 21);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  /* Callout box - fixed position at the bottom of the page */
+.callout {
+  position: fixed;
+  bottom: 25px;
+  right: 15px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+/* Callout header */
+.callout-header {
+  padding: 5px 10px;
+  background: #000436;
+  font-size: 30px;
+  color: white;
+  border-style: solid;
+  border-color: #4400ff;
+}
+
+/* Callout container/body */
+.callout-container {
+  padding: 10px;
+  background-color: #000000;
+  color: lime;
+  border-style: solid;
+  border-color: #000436;
+}
+
+/* Close button */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: lime;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Change color on mouse-over */
+.closebtn:hover {
+  color: white;
+}
+
+.webApp {
+  font-size: large;
+}
