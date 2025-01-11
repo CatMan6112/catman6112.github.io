@@ -1,0 +1,32 @@
+.alert {
+    padding: 20px;
+      background-color: #000000;
+      color: rgb(9, 255, 0);
+      margin-bottom: 15px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      border: #1eff00;
+      border-style: solid;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: rgb(0, 255, 21);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  
