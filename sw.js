@@ -4,7 +4,7 @@ var urlsToCache = [
     'index.html',
     'chat.html',
     'update.html',
-    'assets/img/christmas-logo-512.png'
+    'assets/img/christmas-logo-512.png',
     'assets/img/logo-192.png',
     'assets/img/logo-512.png',
     'assets/img/logo.png',
