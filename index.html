@@ -1,155 +1,89 @@
+<!--   ____      _        _   _ _ _                ____                            -->
+<!--  / ___|__ _| |_     | \ | (_) |_ _ __ ___    / ___| __ _ _ __ ___   ___  ___  -->
+<!-- | |   / _` | __|____|  \| | | __| '__/ _ \  | |  _ / _` | '_ ` _ \ / _ \/ __| -->
+<!-- | |__| (_| | ||_____| |\  | | |_| | | (_) | | |_| | (_| | | | | | |  __/\__ \ -->
+<!--  \____\__,_|\__|    |_| \_|_|\__|_|  \___/   \____|\__,_|_| |_| |_|\___||___/ -->
+
+<!--  ____            _           _       ____                                  -->
+<!-- |  _ \ _ __ ___ (_) ___  ___| |_ _  |  _ \ _____   ____ _ _ __ ___  _ __   -->
+<!-- | |_) | '__/ _ \| |/ _ \/ __| __(_) | |_) / _ \ \ / / _` | '_ ` _ \| '_ \  -->
+<!-- |  __/| | | (_) | |  __/ (__| |_ _  |  _ <  __/\ V / (_| | | | | | | |_) | -->
+<!-- |_|   |_|  \___// |\___|\___|\__(_) |_| \_\___| \_/ \__,_|_| |_| |_| .__/  -->
+<!--               |__/                                                 |_|     -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8610559705757199"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="Cat-Nitro, the place for games, cats, and stuff">
-    <meta name="keywords" content="pwa">
-    <meta name="mobile-web-app-capable" content="no">
-    <meta name="author" content="Cat-Nitro">
-    <meta name="copyright" content="CatMan">
-    <meta name="robots" content="follow">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Cat-Nitro Games">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="Cat-Nitro, the place for games, cats, and stuff">
-    <meta name="theme-color" content="#000000">
-    <title>Cat-Nitro | Games</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/filtered-logo-512.png">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="assets/css/css.css">
-    <style>
-        :root {
-            --theme: #000000;
-            --hover-scale: 1.2;
-            --hover-duration: 0.25s;
-            --text-pop-scale: 1.05;
-            --text-hover-duration: 0.5s;
-            --text-hover-color: #1eff00;
-        }
-        a {
-            text-decoration: none;
-            color: var(--theme);
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000000;
-            color: white;
-        }
-        .motd-container {
-            width: 100%;
-            background-color: black;
-            border: 2px solid blue;
-            overflow: hidden;
-            white-space: nowrap;
-            box-sizing: border-box;
-        }
-        .motd-text {
-            display: inline-block;
-            color: violet;
-            font-size: 20px;
-            animation: scrollText linear infinite;
-        }
-        @keyframes scrollText { 0% { transform: translateX(100%);} 100% { transform: translateX(-100%);} }
-        .game-list a,
-        .emu-list a {
-            width: 22%;
-            padding: 4px 0;
-            border-radius: 15px;
-            border-width: 1px;
-            margin: 4px 0;
-            display: inline-block;
-            position: relative;
-            transition: transform var(--hover-duration) ease, box-shadow var(--hover-duration) ease;
-            will-change: transform;
-        }
-        .game-list a:hover,
-        .emu-list a:hover {
-            transform: scale(var(--hover-scale));
-            z-index: 10;
-            box-shadow: 0 0 12px 4px #1eff00;
-        }
-        .game-list .link,
-        .emu-list .link,
-        h1:not(.flick),
-        h2,
-        h3,
-        p.link {
-            transition: transform var(--text-hover-duration) ease,
-                        color var(--text-hover-duration) ease,
-                        text-shadow var(--text-hover-duration) ease;
-        }
-        .game-list a:hover .link,
-        .emu-list a:hover .link,
-        h1:not(.flick):hover,
-        h2:hover,
-        h3:hover,
-        p.link:hover {
-            color: var(--text-hover-color) !important;
-            text-shadow: 0 0 10px var(--text-hover-color),
-                         0 0 20px var(--text-hover-color),
-                         0 0 30px var(--text-hover-color);
-            transform: translateY(-2px) scale(var(--text-pop-scale));
-        }
-        .search-bar {
-            width: 60%;
-            max-width: 500px;
-            padding: 10px 15px;
-            font-size: 20px;
-            background-color: #000000;
-            color: #d400ff;
-            border: 1px solid #4400ff;
-            border-radius: 15px;
-            outline: none;
-        }
-        .search-bar::placeholder { color: #4400ff; }
+  <!-- ───────────── BASIC META / PWA ───────────── -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cat-Nitro, the place for games, cats, and stuff">
+  <meta name="keywords"    content="pwa">
+  <meta name="author"      content="Cat-Nitro">
+  <meta name="copyright"   content="CatMan">
+  <meta name="robots"      content="follow">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Cat-Nitro Games">
+  <meta property="og:description" content="Cat-Nitro, the place for games, cats, and stuff">
+  <meta name="theme-color" content="#000000">
 
-        /* ‑‑‑ Recently‑played list adopts the same card style as games ‑‑‑ */
-.recent-list a{
-    width:22%;
-    padding:4px 0;
-    border-radius:15px;
-    border-width:1px;
-    margin:4px 0;
-    display:inline-block;
-    position:relative;
-    transition:transform var(--hover-duration) ease,
-               box-shadow var(--hover-duration) ease;
-    will-change:transform;
-}
-.recent-list a:hover{
-    transform:scale(var(--hover-scale));
-    z-index:10;
-    box-shadow:0 0 12px 4px #1eff00;
-}
+  <title>Cat-Nitro | Games</title>
 
+  <!-- ───────────── ICONS / MANIFEST ───────────── -->
+  <link rel="icon"     type="image/x-icon" href="assets/img/filtered-logo-512.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- ───────────── STYLES ───────────── -->
+  <link rel="stylesheet" href="assets/css/css.css">
+  <style>
+    :root{--theme:#000;--hover-scale:1.2;--hover-duration:.25s;--text-pop-scale:1.05;--text-hover-duration:.5s;--text-hover-color:#1eff00}
+    a{text-decoration:none;color:var(--theme)}
+    body{margin:0;font-family:Arial, sans-serif;background:#000;color:#fff}
+    .motd-container{width:100%;background:#000;border:2px solid blue;overflow:hidden;white-space:nowrap;box-sizing:border-box}
+    .motd-text{display:inline-block;color:violet;font-size:20px;animation:scrollText linear infinite}
+    @keyframes scrollText{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+    .game-list a,.emu-list a,.recent-list a{width:22%;padding:4px 0;border-radius:15px;border-width:1px;margin:4px 0;display:inline-block;position:relative;transition:transform var(--hover-duration) ease,box-shadow var(--hover-duration) ease;will-change:transform}
+    .game-list a:hover,.emu-list a:hover,.recent-list a:hover{transform:scale(var(--hover-scale));z-index:10;box-shadow:0 0 12px 4px #1eff00}
+    .game-list .link,.emu-list .link,h1:not(.flick),h2,h3,p.link{transition:transform var(--text-hover-duration) ease,color var(--text-hover-duration) ease,text-shadow var(--text-hover-duration) ease}
+    .game-list a:hover .link,.emu-list a:hover .link,h1:not(.flick):hover,h2:hover,h3:hover,p.link:hover{color:var(--text-hover-color)!important;text-shadow:0 0 10px var(--text-hover-color),0 0 20px var(--text-hover-color),0 0 30px var(--text-hover-color);transform:translateY(-2px) scale(var(--text-pop-scale))}
+    .search-bar{width:60%;max-width:500px;padding:10px 15px;font-size:20px;background:#000;color:#d400ff;border:1px solid #4400ff;border-radius:15px;outline:none}
+    .search-bar::placeholder{color:#4400ff}
+    body.searching #recentHeading,
+    body.searching .recent-list{
+    display:none!important;}
+    .discord{background-color: #7785cc; color: #000;}
     </style>
+
+  <!-- ───────────── ADSENSE ───────────── -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8610559705757199" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div id="videoContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ctYNBd6t4-g?si=OynAM4zGf6gmVPO9&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div class="motd-container"><div class="motd-text">Breaking News: Developer randomly gets motivation to fix a chatroom. it took like an hour</div></div>
-    <center>
-        <img src="assets/img/filtered-logo-512.png" class="front" alt="Cat‑Nitro logo" style="width:125px;height:125px;margin-top:20px;">
-        <h1 class="flick"><b>Cat‑Nitro Games</b></h1>
-    </center>
-    <hr style="height:2px;border-width:0;color:white;background-color:blue">
-    <div class="search-wrapper"><center>
-        <input type="text" id="gameSearch" class="search-bar" placeholder="Search games or emulators… (e.g., retro bowl)">
-    </center></div>
-    <hr style="height:2px;border-width:0;color:white;background-color:blue">
+  <!-- ───────────── MOTD TICKER ───────────── -->
+  <div class="motd-container">
+    <div class="motd-text">Breaking News: Developer randomly gets motivation to fix a chatroom. Took like an hour.</div>
+  </div>
 
-<font color="blue">
-  <h1 id="recentHeading" style="display:none;"><center>Recently Played</center></h1>
-</font>
-<center class="recent-list" style="display:none;"></center>
-<hr style="height:2px;border-width:0;color:white;background-color:blue">
-<hr style="height:2px;border-width:0;color:white;background-color:blue">
+  <!-- ───────────── HEADER ───────────── -->
+  <center>
+    <img src="assets/img/filtered-logo-512.png" alt="Cat-Nitro logo" style="width:125px;height:125px;margin-top:20px">
+    <h1 class="flick"><b>Cat-Nitro Games</b></h1>
+  </center>
+  <hr style="height:2px;border:0;background:blue">
 
+  <!-- ───────────── SEARCH ───────────── -->
+  <center>
+    <input id="gameSearch" class="search-bar" placeholder="Search games or emulators… (e.g., retro bowl)">
+  </center>
+  <hr style="height:2px;border:0;background:blue">
+
+  <!-- ───────────── RECENTLY PLAYED ───────────── -->
+  <font color="blue"><h1 id="recentHeading" style="display:none"><center>Recently Played</center></h1></font>
+  <center class="recent-list" style="display:none"></center>
+  <hr style="height:2px;border:0;background:blue">
+
+  <!-- ───────────── GAME LIST PLACEHOLDER ───────────── -->
+  <center class="game-list">
     <center class="game-list">
         <a href="games/1v1lol/index.html">
             <b><p class="link">1v1lol</p></b>
@@ -494,194 +428,146 @@
           <a href="games/yohoho_io/index.html">
           <b><p class="link">Yohoho.io</p></b> 
       </a>
-    </center>
-    <font color="blue"><h1 id="emuHeading"><center>Emulators/Others</center></h1></font>
-    <h2><p class="link"><center>Links not working (locally blocked at my school) will have a * next to them!</center></p></h2>
-    <hr style="height:2px;border-width:0;color:white;background-color:blue">
-    <center class="emu-list">
-            <a href="https://discord.gg/5rxbeUuEhZ">
-                <b><p class="link">Discord</p></b>
-              </a>
-        <a href="games/GBA/index.html">
-            <b><p class="link">GameBoy Adv Emulator</p></b>
-          </a>
-           <a href="http://bevindooker.nicolasai.com">
-              <b><p class="link">Bevin Dooker Archive</p></b>
-            </a>  
-           <a href="chatroom\chat-room\index.html">
-              <b><p class="link">Chatroom</p></b> 
-            </a> 
-            <a href="polls.html">
-              <b><p class="link">Polls!</p></b>
-          </a>
-          <a href="/hd_fnaf/index.html">
-            <b><p class="link">FNAF-Collection</p></b>
-          </a>
-            <a href="https://drive.google.com/drive/folders/1bC3ttyl-LvOOfacMnfIJv8FKr3LIR9SO">
-              <b><p class="link">DS ROM Collection</p></b>
-            </a>
-          <a href="https://brxxn.github.io/ds-anywhere/">
-              <b><p class="link">DS-Anywhere*</p></b>
-            </a> 
-             <a href="/game_reccomendations.html">
-                <b><p class="link">Game Reccomendations</p></b>
-              </a>
+  </center>
 
+  <!-- ───────────── EMULATORS / OTHER LINKS ───────────── -->
+  <font color="blue"><h1 id="emuHeading"><center>Emulators/Others</center></h1></font>
+  <hr style="height:2px;border:0;background:blue">
 
-                     <!-- <a href="news.html">
-              <b><p class="link">News</p></b>
-            </a> -->
-          <!-- <a href="ads.html">
-              <b><p class="link">Support</p></b>
-            </a>  -->
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <center>
-        <!-- <a href="https://www.youtube.com/watch?v=fKWGtTeL3_U">I... am Steve.</a> -->
-        </center>
-          
-    </center>
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
-    Hello. I have some very sad news :< <br>
-    Some incel desided to be *very* weird and send some very <i>odd</i> requests to the api that I use to moderate the chatroom. There were like 221 total requests and over 440 thousand tokens requested. This in total costed me like 8 dollars. i am 3 dollars in debt to sam altman now. So, i just hope whoever does that suffers the most painful death and watches everyone they love fall before them in the most horrific and traumatic way possible ^_^.
-    </div>
-    
-    <div class="callout" id="webAppPopup">
+  <center class="emu-list">
+    <a href="https://discord.gg/5rxbeUuEhZ"><p class="link"><b>Discord</b></p></a>
+    <a href="games/GBA/index.html"><p class="link"><b>GameBoy Adv Emulator</b></p></a>
+    <a href="http://bevindooker.nicolasai.com"><p class="link"><b>Bevin Dooker Archive</b></p></a>
+    <a href="chatroom/chat-room/index.html"><p class="link"><b>Chatroom</b></p></a>
+    <a href="polls.html"><p class="link"><b>Polls!</b></p></a>
+    <a href="/hd_fnaf/index.html"><p class="link"><b>FNAF-Collection</b></p></a>
+    <a href="https://drive.google.com/drive/folders/1bC3ttyl-LvOOfacMnfIJv8FKr3LIR9SO"><p class="link"><b>DS ROM Collection</b></p></a>
+    <a href="https://brxxn.github.io/ds-anywhere/"><p class="link"><b>DS-Anywhere*</b></p></a>
+    <a href="/game_reccomendations.html"><p class="link"><b>Game Recommendations</b></p></a>
+  </center>
+
+  <!-- ───────────── NOTIFICATION POPUP ───────────── -->
+  <div class="callout" id="webAppPopup" style="display:none">
     <div class="callout-header">
-      Notification
-      <span class="closebtn" id="closePopup">&times;</span>
+    Discord<span id="closePopup" class="closebtn">&times;</span>
     </div>
     <div class="callout-container">
-      <p class="webApp">Did you know we have a DISCORD SERVER? you should join for exclusive notifications and updates.</p> <a href="https://discord.gg/5rxbeUuEhZ">Join!</a>
+      <p class="webApp">Did you know we have a DISCORD SERVER? Join for exclusive notifications and updates.</p>
+      <a class="discord" href="https://discord.gg/5rxbeUuEhZ">Join!</a>
     </div>
   </div>
 
+  <!-- ───────────── SCRIPTS ───────────── -->
   <script>
-    // Show the popup (you can hook this to any event or remove the timeout)
+    /* ── popup ── */
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('webAppPopup').style.display = 'block';
-      }, 500); // delay in ms
+      setTimeout(() => document.getElementById('webAppPopup').style.display = 'block', 500);
     });
+    document.getElementById('closePopup').addEventListener('click', () =>
+      document.getElementById('webAppPopup').style.display = 'none'
+    );
+  </script>
 
-    // Close button handler
-    document.getElementById('closePopup').addEventListener('click', function() {
-      document.getElementById('webAppPopup').style.display = 'none';
+  <!-- ── search filter ── -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    /* element refs */
+    const searchInput   = document.getElementById('gameSearch');
+    const gameLinks     = Array.from(document.querySelectorAll('.game-list a'));
+    const emuLinks      = Array.from(document.querySelectorAll('.emu-list  a'));
+    const emuHeading    = document.getElementById('emuHeading');
+
+    /* recently-played pieces (only used for the body class solution) */
+    const recentHeading = document.getElementById('recentHeading');
+    const recentWrap    = document.querySelector('.recent-list');   // keeps IDEs happy :)
+
+    /* main filter */
+    const filter = () => {
+      const term = searchInput.value.trim().toLowerCase();
+
+      /* ── 1. toggle body class so CSS can do the hiding ── */
+      document.body.classList.toggle('searching', term.length > 0);
+
+      /* ── 2. filter game links ── */
+      gameLinks.forEach(link =>
+        link.style.display = term && !link.textContent.toLowerCase().includes(term)
+          ? 'none'
+          : 'inline-block'
+      );
+
+      /* ── 3. filter emulator/other links + heading ── */
+      let showEmu = false;
+      emuLinks.forEach(link => {
+        const match = !term || link.textContent.toLowerCase().includes(term);
+        link.style.display = match ? 'inline-block' : 'none';
+        if (match) showEmu = true;
+      });
+      emuHeading.style.display = showEmu ? 'block' : 'none';
+    };
+
+    /* hook up input listener */
+    searchInput.addEventListener('input', filter);
+    filter();                // run once on load
+  });
+</script>
+
+  <!-- ── ticker speed (constant) + service worker ── -->
+  <script>
+    const motdText  = document.querySelector('.motd-text');
+    motdText.style.animationDuration = '30s';
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () =>
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.warn('SW failed:', err))
+      );
+    }
+  </script>
+
+  <!-- ── recently-played tracker ── -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const KEY      = 'recentlyPlayed';
+      const LIMIT    = 10;
+      const wrap     = document.querySelector('.recent-list');
+      const header   = document.getElementById('recentHeading');
+      const gameAnch = Array.from(document.querySelectorAll('.game-list a'));
+
+      const load  = () => JSON.parse(localStorage.getItem(KEY) || '[]');
+      const save  = arr => localStorage.setItem(KEY, JSON.stringify(arr));
+
+      const render = () => {
+        const items = load();
+        wrap.innerHTML          = '';
+        header.style.display    = items.length ? 'block':'none';
+        wrap.style.display      = items.length ? 'block':'none';
+        items.forEach(({href,text}) => {
+          const a = document.createElement('a');
+          a.href  = href;
+          a.innerHTML = `<b><p class="link">${text}</p></b>`;
+          wrap.appendChild(a);
+        });
+      };
+
+      const add = link => {
+        let arr = load().filter(i => i.href !== link.href);
+        arr.unshift({href:link.href, text:link.textContent.trim()});
+        if (arr.length > LIMIT) arr.pop();
+        save(arr); render();
+      };
+
+      gameAnch.forEach(a => a.addEventListener('click', () => add(a)));
+      render();
     });
   </script>
-    
-    
-    <!-- <script>
-        function _0x5a5b(){const _0x556494=['4133408OZFMvW','3578238pIHuzf','Current\x20Host:','includes','4489068MtoeHZ','88HpRDGc','1027MEWhDf','1360107jkMEeB','href','nicolasai.com','3114332AWxmRy','location','466TMyzPt','5YXyGzf','https://cyberhoot.com/cybrary/script-kiddie/','7XCCuCG','3427560onrXHJ','catman6112.github.io'];_0x5a5b=function(){return _0x556494;};return _0x5a5b();}const _0x35e663=_0x1135;(function(_0x2b32e5,_0x193382){const _0x39ae9f=_0x1135,_0x45c33c=_0x2b32e5();while(!![]){try{const _0x5c2953=-parseInt(_0x39ae9f(0x84))/0x1*(-parseInt(_0x39ae9f(0x8a))/0x2)+parseInt(_0x39ae9f(0x85))/0x3+-parseInt(_0x39ae9f(0x88))/0x4*(-parseInt(_0x39ae9f(0x8b))/0x5)+parseInt(_0x39ae9f(0x82))/0x6*(parseInt(_0x39ae9f(0x7b))/0x7)+parseInt(_0x39ae9f(0x7e))/0x8+parseInt(_0x39ae9f(0x7f))/0x9+parseInt(_0x39ae9f(0x7c))/0xa*(-parseInt(_0x39ae9f(0x83))/0xb);if(_0x5c2953===_0x193382)break;else _0x45c33c['push'](_0x45c33c['shift']());}catch(_0xdf11e){_0x45c33c['push'](_0x45c33c['shift']());}}}(_0x5a5b,0x5f9cf));const allowedHosts=[_0x35e663(0x7d),'cat-nitro.github.io','crownprincehospital.com',_0x35e663(0x87)],currentHost=window[_0x35e663(0x89)]['hostname'];console['log'](_0x35e663(0x80),currentHost);function _0x1135(_0x7011ae,_0x56fb80){const _0x5a5b99=_0x5a5b();return _0x1135=function(_0x113531,_0x2df011){_0x113531=_0x113531-0x7b;let _0x5da616=_0x5a5b99[_0x113531];return _0x5da616;},_0x1135(_0x7011ae,_0x56fb80);}!allowedHosts[_0x35e663(0x81)](currentHost)&&(window[_0x35e663(0x89)][_0x35e663(0x86)]=_0x35e663(0x8c));
-    </script> -->
-    
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const searchInput = document.getElementById('gameSearch');
-        if (!searchInput) return;
-        const gameLinks = Array.from(document.querySelectorAll('.game-list a'));
-        const emuLinks  = Array.from(document.querySelectorAll('.emu-list  a'));
-        const emuHeading = document.getElementById('emuHeading');
-        function filterLinks() {
-            const term = searchInput.value.trim().toLowerCase();
-            let anyGameShown = false;
-            let anyEmuShown  = false;
-            gameLinks.forEach(link => {
-                const match = !term || link.textContent.toLowerCase().includes(term);
-                link.style.display = match ? 'inline-block' : 'none';
-                if (match) anyGameShown = true;
-            });
-            emuLinks.forEach(link => {
-                const match = !term || link.textContent.toLowerCase().includes(term);
-                link.style.display = match ? 'inline-block' : 'none';
-                if (match) anyEmuShown = true;
-            });
-            if (emuHeading) emuHeading.style.display = anyEmuShown ? 'block' : 'none';
-        }
-        searchInput.addEventListener('input', filterLinks);
-        filterLinks();
-    });
-    </script>
-    <script>
-        const motdText = document.querySelector('.motd-text');
-        const speed = 20;
-        const textLength = motdText.offsetWidth;
-        const containerWidth = document.querySelector('.motd-container').offsetWidth;
-        const duration = (textLength + containerWidth) / speed;
-        motdText.style.animationDuration = `${30}s`;
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('sw.js').then(function(registration) {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    registration.pushManager.getSubscription().then(function(sub) {
-                        if (sub === null) {
-                            console.log('Not subscribed to push service!');
-                        } else {
-                            console.log('Subscription object: ', sub);
-                            storeSubscription(sub);
-                        }
-                    });
-                }, function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const RECENT_KEY = 'recentlyPlayed';
-          const MAX_ITEMS  = 10;
-        
-          const recentWrap   = document.querySelector('.recent-list');
-          const recentHeader = document.getElementById('recentHeading');
-          const gameLinks    = Array.from(document.querySelectorAll('.game-list a'));
-        
-          /* ---------- helpers ---------- */
-          const loadRecent = () => JSON.parse(localStorage.getItem(RECENT_KEY) || '[]');
-        
-          const saveRecent = list => localStorage.setItem(RECENT_KEY, JSON.stringify(list));
-        
-          const renderRecent = () => {
-              const items = loadRecent();
-              recentWrap.innerHTML = '';
-              if (!items.length){          // hide section when empty
-                  recentWrap.style.display   = 'none';
-                  recentHeader.style.display = 'none';
-                  return;
-              }
-              recentWrap.style.display   = 'block';
-              recentHeader.style.display = 'block';
-        
-              items.forEach(({href,text}) => {
-                  const a   = document.createElement('a');
-                  a.href    = href;
-                  a.innerHTML = `<b><p class="link">${text}</p></b>`;
-                  recentWrap.appendChild(a);
-              });
-          };
-        
-          const addToRecent = link => {
-              let list = loadRecent();
-              const idx = list.findIndex(i => i.href === link.href);
-              if (idx !== -1) list.splice(idx,1);        // de‑duplicate
-              list.unshift({href: link.href, text: link.textContent.trim()});
-              if (list.length > MAX_ITEMS) list = list.slice(0, MAX_ITEMS);
-              saveRecent(list);
-          };
-        
-          /* ---------- wire it up ---------- */
-          gameLinks.forEach(link => link.addEventListener('click', () => addToRecent(link)));
-          renderRecent();
-        });
-        </script>
-        
+
+  <!-- ──────────────────────────────────────────────
+       encrypted host-check script -- leave commented
+  <script>
+    function _0x5a5b(){const _0x556494=['4133408OZFMvW','3578238pIHuzf','Current Host:','includes','4489068MtoeHZ','88HpRDGc','1027MEWhDf','1360107jkMEeB','href','nicolasai.com','3114332AWxmRy','location','466TMyzPt','5YXyGzf','https://cyberhoot.com/cybrary/script-kiddie/','7XCCuCG','3427560onrXHJ','catman6112.github.io'];_0x5a5b=function(){return _0x556494;};return _0x5a5b();}const _0x35e663=_0x1135;(function(_0x2b32e5,_0x193382){const _0x39ae9f=_0x1135,_0x45c33c=_0x2b32e5();while(!![]){try{const _0x5c2953=-parseInt(_0x39ae9f(0x84))/0x1*(-parseInt(_0x39ae9f(0x8a))/0x2)+parseInt(_0x39ae9f(0x85))/0x3+-parseInt(_0x39ae9f(0x88))/0x4*(-parseInt(_0x39ae9f(0x8b))/0x5)+parseInt(_0x39ae9f(0x82))/0x6*(parseInt(_0x39ae9f(0x7b))/0x7)+parseInt(_0x39ae9f(0x7e))/0x8+parseInt(_0x39ae9f(0x7f))/0x9+parseInt(_0x39ae9f(0x7c))/0xa*(-parseInt(_0x39ae9f(0x83))/0xb);if(_0x5c2953===_0x193382)break;else _0x45c33c['push'](_0x45c33c['shift']());}catch(_0xdf11e){_0x45c33c['push'](_0x45c33c['shift']());}}}(_0x5a5b,0x5f9cf));const allowedHosts=[_0x35e663(0x7d),'cat-nitro.github.io','crownprincehospital.com',_0x35e663(0x87)],currentHost=window[_0x35e663(0x89)]['hostname'];console['log'](_0x35e663(0x80),currentHost);function _0x1135(_0x7011ae,_0x56fb80){const _0x5a5b99=_0x5a5b();return _0x1135=function(_0x113531,_0x2df011){_0x113531=_0x113531-0x7b;let _0x5da616=_0x5a5b99[_0x113531];return _0x5da616;},_0x1135(_0x7011ae,_0x56fb80);}!allowedHosts[_0x35e663(0x81)](currentHost)&&(window[_0x35e663(0x89)][_0x35e663(0x86)]=_0x35e663(0x8c));
+  </script>
+  ────────────────────────────────────────────── -->
+
 </body>
 </html>
