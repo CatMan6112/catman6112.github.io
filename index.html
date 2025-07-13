@@ -126,6 +126,21 @@
     header.site-header li:hover span {
       opacity: 1;
     }
+    footer.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px 12px 0 0;
+  z-index: 9999;
+}
+footer.site-footer a {
+  /* “Default” link styling */
+  color: #0066cc;
+  text-decoration: underline;
+}
   </style>
 </head>
 <body>
@@ -255,8 +270,8 @@
       <a href="games/deathcario/index.html">
           <b><p class="link">Death Car IO</p></b> 
       </a>
-        <a href="https://cat-nitro.github.io/deepest-sword/">
-          <b><p class="link">Deepest Sword</p></b> 
+       <!-- <a href="https://cat-nitro.github.io/deepest-sword/">
+          <b><p class="link">Deepest Sword</p></b> -->
       </a>
       <a href="games/death-run-3d/index.html">
         <b><p class="link">Death Run 3D</p></b> 
@@ -273,8 +288,8 @@
     <a href="games/ducklife1/index.html">
         <b><p class="link">Duck Life 1</p></b> 
     </a>
-    <a href="https://cat-nitro.github.io/DuckLife4/">
-        <b><p class="link">Duck Life 4</p></b> 
+    <!-- <a href="https://cat-nitro.github.io/DuckLife4/">
+        <b><p class="link">Duck Life 4</p></b> -->
     </a>
     </a>
       <a href="games/edge-surf/index.html">
@@ -358,7 +373,7 @@
       <a href="games/miniputt/index.html">
           <b><p class="link">Mini-putt</p></b> 
       </a>
-          <a href="https://cat-nitro.github.io/monkey-mart/">
+          <a href="games/monkey-mart/index.html">
         <b><p class="link">Monkeh Mart</p></b> 
     </a>
       <a href="games/monster-tracks/index.html">
@@ -653,5 +668,10 @@
       render();
     });
   </script>
+  <hr style="height:2px;border:0;background:blue">
+  <footer>
+  <a href="dmca.html">DMCA</a>
+</footer>
+
 </body>
 </html>

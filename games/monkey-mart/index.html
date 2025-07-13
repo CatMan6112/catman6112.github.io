@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Monkey Mart, Cat-Nitro</title>
+  <meta name="description" content="Monkey Mart: Fullscreen, Ad-Free, Unblocked Game">
+
+  <!-- core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+  <style>
+    /* make the page itself full-screen */
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: url('images/background1.png') center/cover no-repeat;
+    }
+    /* stretch iframe to fill viewport */
+    .game-player {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .game-player iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    /* optional: hide mobile back button if unused */
+    #mobile-back-button {
+      display: none;
+    }
+    /* optional: fullscreen button overlay */
+    .fs-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="game-player" id="game-player">
+    <iframe id="game-area"
+            src="file/"
+            scrolling="no"
+            allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- optional fullscreen toggle (still works if you want it) -->
+  <button class="btn btn-capsule fs-btn" onclick="open_fullscreen()">
+    <i class="bi bi-arrows-fullscreen"></i>
+  </button>
+
+  <!-- core JS -->
+  <script src="js/jquery-3.6.2.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
