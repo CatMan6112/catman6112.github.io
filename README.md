@@ -21,7 +21,7 @@ If you wish to support, please subscribe or donate to the Buy Me A Coffee.
 
 ## 🔗 Links
 
-[![Cat-Nitro](https://img.shields.io/badge/Cat-Nitro-Nitro)](https://catman6112.github.io)
+[![Cat-Nitro](https://img.shields.io/badge/Cat-Nitro-Nitro)](https://crownprincehospital.com)
 
 [![Freebird](https://img.shields.io/badge/Project-Freebird-Freebird)](https://rizz.crownprincehospital.com)
 

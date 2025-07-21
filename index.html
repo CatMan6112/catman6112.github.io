@@ -2,676 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cat-Nitro, the place for games, cats, and stuff">
-  <meta name="keywords" content="pwa">
-  <meta name="author" content="Cat-Nitro">
-  <meta name="copyright" content="CatMan">
-  <meta name="robots" content="follow">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Cat-Nitro Games">
-  <meta property="og:description" content="Cat-Nitro, the place for games, cats, and stuff">
-  <meta name="theme-color" content="#000000">
-  <title>Cat-Nitro | Games</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/nitro_modern-white_1080.png">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css.css">
+  <title>Cat-Nitro has moved!</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/archived logos/logo.png">
   <style>
-    :root{
-        --theme:#000;
-        --hover-scale:1.2;
-        --hover-duration:.25s;
-        --text-pop-scale:1.05;
-        --text-hover-duration:.5s;
-        --text-hover-color:#1eff00;      /* ← fixed missing semicolon */
-        --hdr-h: 64px;                   /* height of fixed header    */
-        --hdr-offset: 20px;              /* how far it starts above   */
-        }
-    a{text-decoration:none;color:var(--theme)}
-    body{margin:0;
-    padding-top: calc(var(--hdr-h) + var(--hdr-offset));font-family:Arial, sans-serif;background:#000;color:#fff}
-    @keyframes scrollText{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
-    .game-list a,.emu-list a,.recent-list a{width:22%;padding:4px 0;border-radius:15px;border-width:1px;margin:4px 0;display:inline-block;position:relative;transition:transform var(--hover-duration) ease,box-shadow var(--hover-duration) ease;will-change:transform}
-    .game-list a:hover,.emu-list a:hover,.recent-list a:hover{transform:scale(var(--hover-scale));z-index:10;box-shadow:0 0 12px 4px #1eff00}
-    .game-list .link,.emu-list .link,h1:not(.flick),h2,h3,p.link{transition:transform var(--text-hover-duration) ease,color var(--text-hover-duration) ease,text-shadow var(--text-hover-duration) ease}
-    .game-list a:hover .link,.emu-list a:hover .link,h1:not(.flick):hover,h2:hover,h3:hover,p.link:hover{color:var(--text-hover-color)!important;text-shadow:0 0 10px var(--text-hover-color),0 0 20px var(--text-hover-color),0 0 30px var(--text-hover-color);transform:translateY(-2px) scale(var(--text-pop-scale))}
-    .search-bar{width:60%;max-width:500px;padding:10px 15px;font-size:20px;background:#000;color:#d400ff;border:1px solid #4400ff;border-radius:15px;outline:none}
-    .search-bar::placeholder{color:#4400ff}
-    body.searching #recentHeading,
-    body.searching .recent-list{
-      display:none!important;
-    }
-    .discord{background-color: #171f39; color: #ffffff;}
-    :root {
-      --hdr-bg: rgba(0,0,0,0.55);
-      --hdr-shadow: 0 4px 15px rgba(0,0,0,.35);
-      --txt-col: #ffffff;
-      --hdr-h: 64px;
-      --hdr-radius: 12px;
-      --logo-size: 48px;
-      --reveal-extra: 120px;
-      --intro-time: .6s;
-      --hover-time: .25s;
-    }
-    body { margin: 0; font-family: system-ui, sans-serif; }
-    header.site-header {
-      position: fixed;
-      top: 10px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      height: var(--hdr-h);
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      background: var(--hdr-bg);
-      backdrop-filter: blur(6px);
-      border-radius: var(--hdr-radius);
-      box-shadow: var(--hdr-shadow);
-      z-index: 9999;
-      transform-origin: top center;
-    }
-    @keyframes slideIn {
-      0% { transform: translate(-50%, calc(-1 * (var(--hdr-h) + 20px))) scale(.5); }
-      100% { transform: translate(-50%, 0) scale(1); }
-    }
-    header.site-header.animated-in {
-      animation: slideIn var(--intro-time) cubic-bezier(.42,0,.58,1) forwards;
-    }
-    header.site-header ul {
-      display: flex;
-      gap: 10px;
-      list-style: none;
+    body {
+      background-color: black;
+      color: #d400ff;
       margin: 0;
       padding: 0;
     }
-    header.site-header a.logo-link {
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: var(--logo-size);
-      width: var(--logo-size);
-      overflow: hidden;
-      transition: width var(--hover-time) ease;
-      text-decoration: none;
-      color: var(--txt-col);
+
+    .logo {
+      display: block;
+      margin: 20px auto 0;
+      max-width: 150px;
+      height: auto;
     }
-    header.site-header li:hover a.logo-link {
-      width: calc(var(--logo-size) + var(--reveal-extra));
+
+    h1 {
+      color: #d400ff;
+      text-shadow:
+        0 0 10px #003cff,
+        0 0 20px #0066ff,
+        0 0 30px #0064e6;
+      text-align: center;
+      margin: 0;
+      padding-top: 20px;
     }
-    header.site-header img {
-      height: 100%;
-      width: auto;
-      transition: opacity var(--hover-time) ease;
+
+    h2 {
+      color: #550077;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 0;
+      font-size: 20px;
     }
-    header.site-header img.hover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
+
+    p {
+      font-size: 25px;
+      color: #d400ff;
+      text-shadow:
+        0 0 10px #003cff,
+        0 0 20px #0066ff,
+        0 0 30px #0064e6;
+      margin-top: 50px;
+      text-align: center;
+      padding: 0 20px;
     }
-    header.site-header li:hover img.hover {
-      opacity: 1;
-    }
-    header.site-header li:hover img.default {
-      opacity: 0;
-    }
-    header.site-header span {
-      margin-left: 10px;
-      white-space: nowrap;
-      opacity: 0;
-      transition: opacity var(--hover-time) ease;
-      font-size: .95rem;
-      line-height: 1;
-    }
-    header.site-header li:hover span {
-      opacity: 1;
-    }
-    footer.site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 8px 16px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px 12px 0 0;
-  z-index: 9999;
-}
-footer.site-footer a {
-  /* “Default” link styling */
-  color: #0066cc;
-  text-decoration: underline;
-}
   </style>
 </head>
 <body>
-  <header class="site-header" id="mainHeader">
-    <ul>
-      <li><a href="hd_fnaf/index.html" class="logo-link"><img src="assets/img/fnaf_white.png" alt="Games" class="default"><img src="assets/img/fnaf_white.png" alt="" class="hover"><span>FNAF - HD</span></a></li>
-      <li><a href="games/GBA/index.html" class="logo-link"><img src="assets/img/gameboy-emu-icon.png" alt="Games" class="default"><img src="assets/img/gameboy-emu-icon.png" alt="" class="hover"><span>Gameboy Emu</span></a></li>
-      <li><a href="https://rizz.crownprincehospital.com" class="logo-link"><img src="assets/img/free-bird_1080.png" alt="Games" class="default"><img src="assets/img/free-bird_1080.png" alt="" class="hover"><span>Freebird</span></a></li>
-      <li><a href="https://discord.gg/5rxbeUuEhZ" class="logo-link"><img src="assets/img/discord_512.png" alt="Discord" class="default"><img src="assets/img/discord_512.png" alt="" class="hover"><span>Discord</span></a></li>
-    </ul>
-  </header>
-
-  <center>
-    <img src="assets/img/nitro_modern-white_1080.png" alt="Cat-Nitro logo" style="width:125px;height:125px;margin-top:20px">
-    <h1 class="flick"><b>Cat-Nitro Games</b></h1>
-  </center>
-  <hr style="height:2px;border:0;background:blue">
-  <center>
-    <input id="gameSearch" class="search-bar" placeholder="Search games or emulators… (e.g., retro bowl)">
-  </center>
-  <hr style="height:2px;border:0;background:blue">
-  <font color="blue"><h1 id="recentHeading" style="display:none"><center>Recently Played</center></h1></font>
-  <center class="recent-list" style="display:none"></center>
-  <hr style="height:2px;border:0;background:blue">
-  <center class="game-list">
-<center class="game-list">
-    <center class="game-list">
-        <a href="games/1v1lol/index.html">
-            <b><p class="link">1v1lol</p></b>
-        </a>
-        <a href="games/10-minutes-till-dawn/index.html">
-            <b><p class="link">10 Minutes Till Dawn</p></b>
-        </a>
-        <a href="games/99balls/index.html">
-            <b><p class="link">99 Balls</p></b>
-        </a>
-      <a href="games/100ng/index.html">
-          <b><p class="link">100 Player Pong</p></b>
-      </a>
-      <a href="games/2048/index.html">
-          <b><p class="link">2048</p></b> 
-      </a>
-      <a href="games/achievementunlocked/index.html">
-          <b><p class="link">Achievement Unlocked</p></b> 
-      </a>
-      <a href="games/adarkroom/index.html">
-          <b><p class="link">A Dark Room</p></b> 
-      </a>
-      <a href="games/ages-of-conflict/index.html">
-          <b><p class="link">Ages Of Conflict</p></b> 
-      </a>
-      <a href="games/amazing-rope-police/index.html">
-          <b><p class="link">Amazing Rope Police</p></b> 
-      </a>
-      <a href="games/arcadewizard/index.html">
-        <b><p class="link">Arcade Wizard</p></b> 
-    </a>
-    <a href="games/avalanche/index.html">
-        <b><p class="link">Avalanche</p></b> 
-    </a>
-    <a href="games/awesometanks2/index.html">
-        <b><p class="link">Awesome Tanks 2</p></b> 
-    </a>
-      <a href="games/backrooms-2d/index.html">
-          <b><p class="link">Backrooms</p></b> 
-      </a>
-      <a href="games/baldis-basics/index.html">
-        <b><p class="link">Baldis Basics</p></b> 
-    </a>
-      <a href="games/baldisbasicsfieldtripcampingremake/">
-        <b><p class="link">Baldis Basics Camping</p></b> 
-    </a>
-        <a href="games/basket-random/index.html">
-          <b><p class="link">Basket Random</p></b> 
-      </a>
-      <a href="games/bitlife/index.html">
-          <b><p class="link">Bitlife</p></b> 
-      </a>
-      <a href="games/boxing-random/index.html">
-          <b><p class="link">Boxing Random</p></b> 
-      </a>
-      <a href="games/burger-and-frights/index.html">
-          <b><p class="link">Burger And Frights</p></b> 
-      </a>
-      <a href="games/cheesypuffclicker/index.html">
-        <b><p class="link">Cheesy Poof Clicker</p></b> 
-    </a>
-      <a href="games/chrome-dino/index.html">
-          <b><p class="link">Chrome Dino</p></b> 
-      </a>
-      <a href="games/circlo/index.html">
-        <b><p class="link">CirclO</p></b> 
-        </a>
-      <a href="games\city-car-driving-stunt-master\index.html">
-        <b><p class="link">City Car Stunt Master</p></b> 
-        </a>
-      <a href="games/connect3/index.html">
-          <b><p class="link">Connect 3</p></b> 
-      </a>
-      <a href="games/cookie-clicker/index.html">
-          <b><p class="link">Cookie Clicker</p></b> 
-      </a>
-      <a href="games/core-ball/index.html">
-          <b><p class="link">Core Ball</p></b> 
-      </a>
-      <a href="games/crossyroad/index.html">
-          <b><p class="link">CrossyRoad</p></b> 
-      </a>
-      <a href="games/csgo-clicker/index.html">
-          <b><p class="link">CS:GO Clicker</p></b> 
-      </a>
-      <a href="games/ctr/index.html">
-          <b><p class="link">Cut the Rope</p></b> 
-      </a>
-      <a href="games/ctr-holiday/index.html">
-          <b><p class="link">Cut the Rope Holiday</p></b> 
-      </a>
-      <a href="games/ctr-tr/index.html">
-          <b><p class="link">Cut the Rope Time Travel</p></b> 
-      </a>
-      <a href="games/cubefield/index.html">
-          <b><p class="link">Cubefield</p></b> 
-      </a>
-      <a href="games/dante/index.html">
-          <b><p class="link">Dante</p></b> 
-      </a>
-      <a href="games/deathcario/index.html">
-          <b><p class="link">Death Car IO</p></b> 
-      </a>
-       <!-- <a href="https://cat-nitro.github.io/deepest-sword/">
-          <b><p class="link">Deepest Sword</p></b> -->
-      </a>
-      <a href="games/death-run-3d/index.html">
-        <b><p class="link">Death Run 3D</p></b> 
-    </a>
-      <a href="games/DogeMiner/index.html">
-          <b><p class="link">Doge Miner</p></b> 
-      </a>
-      <a href="games/dragon-vs-bricks/index.html">
-          <b><p class="link">Drangon VS Bricks</p></b> 
-      </a>
-    <a href="games/drive-mad/index.html">
-        <b><p class="link">Drive Mad</p></b> 
-    </a>
-    <a href="games/ducklife1/index.html">
-        <b><p class="link">Duck Life 1</p></b> 
-    </a>
-    <!-- <a href="https://cat-nitro.github.io/DuckLife4/">
-        <b><p class="link">Duck Life 4</p></b> -->
-    </a>
-    </a>
-      <a href="games/edge-surf/index.html">
-          <b><p class="link">Edge Surf</p></b> 
-      </a>
-      <a href="games/Epic Tower Defense/index.html">
-        <b><p class="link">Epic Tower Defense</p></b> 
-    </a>
-      <a href="games/evil-glitch/index.html">
-          <b><p class="link">Evil Glitch</p></b> 
-      </a>
-      <a href="games/evolution/index.html">
-        <b><p class="link">Evolution</p></b> 
-    </a>
-      <a href="games/exo/index.html">
-          <b><p class="link">Exo</p></b> 
-      </a>
-      <a href="games/fairsquares/index.html">
-          <b><p class="link">Fair Squares</p></b> 
-      </a>
-      <a href="games/flappy-bird/index.html">
-        <b><p class="link">Flappy Bird</p></b> 
-    </a>
-    <a href="games/flashtetris/index.html">
-        <b><p class="link">Flash Tetris</p></b> 
-    </a>
-      <a href="games/fruitninja/index.html">
-          <b><p class="link">Fruit Ninja</p></b> 
-      </a>
-      <a href="games/game-inside/index.html">
-          <b><p class="link">Game Inside a Game</p></b> 
-      </a>
-      <a href="games/geodash/index.html">
-          <b><p class="link">Geometry Dash (Scratch)</p></b> 
-      </a>
-     <a href="games/getting-over-it/GOI.html">
-          <b><p class="link">Getting Over It (Scratch)</p></b> 
-      </a>
-      <a href="games/go-ball/index.html">
-          <b><p class="link">Go Ball</p></b> 
-      </a>
-      <a href="games/google-feud/index.html">
-        <b><p class="link">Google Feud</p></b> 
-    </a>
-      <a href="games/halfLife/index.html">
-          <b><p class="link">Half Life 1</p></b> 
-      </a>
-      <a href="games/helios/index.html">
-        <b><p class="link">Helios</p></b> 
-    </a>
-      <a href="games/hba/index.html">
-          <b><p class="link">Hover Bot Arena</p></b> 
-      </a>
-      <a href="games/hextris/index.html">
-          <b><p class="link">Hextris</p></b> 
-      </a>
-      <a href="games/houseofhazards/index.html">
-        <b><p class="link">House Of Hazards</p></b> 
-    </a>
-      <a href="games/interactivebuddy/index.html">
-        <b><p class="link">Interactive Buddy</p></b> 
-    </a>
-      <a href="games/jetpack-joyride/index.html">
-          <b><p class="link">Jetpack Joyride</p></b> 
-      </a>
-      <a href="games/just-fall/index.html">
-        <b><p class="link">Just Fall</p></b> 
-    </a>
-    <a href="games/kitchen-gun-game/index.html">
-        <b><p class="link">Kitchen Gun Game</p></b> 
-    </a>
-      <a href="games/madalin-stunt-cars-3/index.html">
-          <b><p class="link">Madalin Stunt Cars 3</p></b> 
-      </a>
-      <a href="games/mario/index.html">
-          <b><p class="link">Mario</p></b> 
-      </a>
-      <a href="games/minecraft-classic/index.html">
-          <b><p class="link">Minecraft Classic</p></b> 
-      </a>
-      <a href="games/miniputt/index.html">
-          <b><p class="link">Mini-putt</p></b> 
-      </a>
-          <a href="games/monkey-mart/index.html">
-        <b><p class="link">Monkeh Mart</p></b> 
-    </a>
-      <a href="games/monster-tracks/index.html">
-        <b><p class="link">Monster Tracks</p></b> 
-    </a>
-      <a href="games/n-gon/index.html">
-          <b><p class="link">n-gon</p></b> 
-      </a>
-      <a href="games/Ninja Dash/index.html">
-        <b><p class="link">Ninja Dash</p></b> 
-    </a>
-      <a href="games/pacman3d/index.html">
-        <b><p class="link">Pacman 3D</p></b> 
-    </a>
-      <a href="games/pandemic2/index.html">
-          <b><p class="link">Pandemic 2</p></b> 
-      </a>
-      <a href="games/paperio2/index.html">
-          <b><p class="link">Paper.io 2</p></b> 
-      </a>
-      <a href="games/particle-clicker/index.html">
-          <b><p class="link">Particle Clicker</p></b> 
-      </a>
-      <a href="games/pixel-gun-survival/index.html">
-          <b><p class="link">Pixel Gun Survival</p></b> 
-      </a>
-      <a href="games/Polygon Fusion/index.html">
-        <b><p class="link">Polygon Fusion</p></b> 
-    </a>
-      <a href="games/portalflash/index.html">
-          <b><p class="link">Portal (Flash)</p></b> 
-      </a>
-      <a href="games/RagdollArchers/index.html">
-        <b><p class="link">Ragdoll Archers</p></b> 
-    </a>
-      <a href="games/retro-bowl/index.html">
-          <b><p class="link">Retro Bowl</p></b> 
-      </a>
-      <a href="games/rolly-vortex/index.html">
-          <b><p class="link">Rolly Vortex</p></b> 
-      </a>
-      <a href="https://cat-nitro.github.io/RooftopSnipers/">
-          <b><p class="link">Roof-Top Sniperz</p></b> 
-      </a>
-      <a href="games/sand-game/index.html">
-          <b><p class="link">Sand Game</p></b> 
-      </a>
-      <a href="games/sandboxels/index.html">
-        <b><p class="link">Sandboxels</p></b> 
-    </a>
-    <a href="games/santy-is-home/index.html">
-        <b><p class="link">Santy Is Home</p></b> 
-    </a>
-      <a href="games/scrapmetal/index.html">
-          <b><p class="link">Scrap Metal</p></b> 
-      </a>
-      <a href="games/slope/index.html">
-          <b><p class="link">Slope</p></b> 
-      </a>
-      <a href="games/Snow-Rider3D/index.html">
-          <b><p class="link">Snow Rider</p></b> 
-      </a>
-      <a href="games/snowbattle/index.html">
-          <b><p class="link">Snowbattle</p></b> 
-      </a>
-      <a href="games/soccer-random/index.html">
-        <b><p class="link">Soccer Random</p></b> 
-    </a>
-      <a href="games/space-company/index.html">
-          <b><p class="link">Space Company</p></b> 
-      </a>
-      <a href="games/spacegarden/index.html">
-          <b><p class="link">Space Garden</p></b>      
-      </a>
-      <a href="games/stack/index.html">
-        <b><p class="link">Stack</p></b> 
-    </a>
-    <a href="games/station-141/index.html">
-        <b><p class="link">Station 141</p></b> 
-    </a>
-      <a href="games/stick-duel-battle/index.html">
-          <b><p class="link">Stick Duel Battle</p></b> 
-      </a>
-      <a href="games/stickman-hook/index.html">
-        <b><p class="link">Stickman Hook</p></b> 
-    </a>
-      <a href="games/subway-surfers/index.html">
-          <b><p class="link">Subway Surfers</p></b> 
-      </a>
-    <a href="games/Super-Smash-Flash-2/index.htm">
-        <b><p class="link">Super Smash Flash 2</p></b> 
-    </a>
-      <a href="games/Super-Tic-Tac-Toe/index.html">
-        <b><p class="link">Super Tic-Tac-Toe</p></b> 
-    </a>
-      <a href="games/sm64/index.html">
-        <b><p class="link">Super Mario 64</p></b> 
-    </a>
-      <a href="games/swerve/index.html">
-          <b><p class="link">Swerve</p></b> 
-      </a>
-      <a href="games/tank-trouble-2/index.html">
-          <b><p class="link">Tank Trouble 2</p></b> 
-      </a>
-      <a href="games/tanuki-sunset/index.html">
-          <b><p class="link">Tanuki Sunset</p></b> 
-      </a>
-      <a href="games/temple-run-2/index.html">
-          <b><p class="link">Temple Run 2</p></b> 
-      </a>
-     <a href="games/territorial.html">
-        <b><p class="link">territorial.io</p></b> 
-    </a>
-      <a href="games/thebowlingclub/index.html">
-        <b><p class="link">The Bowling Club</p></b> 
-    </a>
-      <a href="games/thisistheonlylevel/index.html">
-        <b><p class="link">This Is The Only Level</p></b> 
-    </a>
-    <a href="games/timeshooter3swat/index.html">
-        <b><p class="link">Time Shooter 3: SWAT</p></b> 
-    </a>
-      <a href="games/twitch-tetris/index.html">
-          <b><p class="link">Twitch Tetris</p></b> 
-      </a>
-      <a href="games/unfairmario/index.html">
-          <b><p class="link">Unfair Mario</p></b> 
-      </a>
-      <a href="games/volley-random/index.html">
-          <b><p class="link">Volley Random</p></b> 
-      </a>
-      <a href="games/wallsmash/index.html">
-          <b><p class="link">Wall Smash</p></b> 
-      </a>
-          <a href="games/yohoho_io/index.html">
-          <b><p class="link">Yohoho.io</p></b> 
-      </a>
-  </center>
-  </center>
-  <font color="blue"><h1 id="emuHeading"><center>DS Emulator (temp)</center></h1></font>
-  <hr style="height:2px;border:0;background:blue">
-  <center class="emu-list">
-    <!-- <a href="https://discord.gg/5rxbeUuEhZ"><p class="link"><b>Discord</b></p></a> -->
-    <!-- <a href="games/GBA/index.html"><p class="link"><b>GameBoy Adv Emulator</b></p></a> -->
-    <!-- <a href="http://bevindooker.nicolasai.com"><p class="link"><b>Bevin Dooker Archive</b></p></a> -->
-    <!-- <a href="chatroom/chat-room/index.html"><p class="link"><b>Chatroom</b></p></a> -->
-    <!-- <a href="polls.html"><p class="link"><b>Polls!</b></p></a> -->
-    <!-- <a href="/hd_fnaf/index.html"><p class="link"><b>FNAF-Collection</b></p></a> -->
-    <a href="https://drive.google.com/drive/folders/1bC3ttyl-LvOOfacMnfIJv8FKr3LIR9SO"><p class="link"><b>DS ROM Collection</b></p></a>
-    <a href="https://brxxn.github.io/ds-anywhere/"><p class="link"><b>DS-Anywhere</b></p></a>
-    <!-- <a href="/game_reccomendations.html"><p class="link"><b>Game Recommendations</b></p></a> -->
-  </center>
-  <!-- <div class="callout" id="webAppPopup" style="display:none">
-    <div class="callout-header">
-      Discord<span id="closePopup" class="closebtn">&times;</span>
-    </div>
-    <div class="callout-container">
-      <p class="webApp">Did you know we have a DISCORD SERVER? Join for exclusive notifications and updates.</p>
-      <a class="discord" href="https://discord.gg/5rxbeUuEhZ">Join!</a> 
-    </div>
-  </div> -->
-
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-      /* safely show popup if it exists */
-      const pop = document.getElementById('webAppPopup');
-      if (pop){
-        setTimeout(()=> pop.style.display='block',500);
-        pop.querySelector('#closePopup')
-            ?.addEventListener('click',()=> pop.style.display='none');
-      }
-
-      /* ★ Restore fly-in */
-      document.getElementById('mainHeader').classList.add('animated-in');
-
-      /* existing search / recent-play code … (unchanged) */
-      const searchInput   = document.getElementById('gameSearch');
-      if (!searchInput) return;         // guard if page snippet only
-
-      const gameLinks     = Array.from(document.querySelectorAll('.game-list a'));
-      const emuLinks      = Array.from(document.querySelectorAll('.emu-list  a'));
-      const emuHeading    = document.getElementById('emuHeading');
-      const recentHeading = document.getElementById('recentHeading');
-
-      const filter = () => {
-        const term = searchInput.value.trim().toLowerCase();
-        document.body.classList.toggle('searching', term.length > 0);
-        gameLinks.forEach(link =>
-          link.style.display =
-            term && !link.textContent.toLowerCase().includes(term)
-              ? 'none' : 'inline-block'
-        );
-        let showEmu = false;
-        emuLinks.forEach(link => {
-          const match = !term || link.textContent.toLowerCase().includes(term);
-          link.style.display = match ? 'inline-block' : 'none';
-          if (match) showEmu = true;
-        });
-        emuHeading.style.display = showEmu ? 'block' : 'none';
-      };
-      searchInput.addEventListener('input', filter);
-      filter();
-
-      const KEY   = 'recentlyPlayed';
-      const LIMIT = 10;
-      const wrap  = document.querySelector('.recent-list');
-      const load  = () => JSON.parse(localStorage.getItem(KEY)||'[]');
-      const save  = arr => localStorage.setItem(KEY, JSON.stringify(arr));
-      const render = () => {
-        const items = load();
-        if (!wrap) return;
-        wrap.innerHTML = '';
-        recentHeading.style.display = items.length ? 'block':'none';
-        wrap.style.display          = items.length ? 'block':'none';
-        items.forEach(({href,text}) => {
-          const a   = document.createElement('a');
-          a.href    = href;
-          a.innerHTML = `<b><p class="link">${text}</p></b>`;
-          wrap.appendChild(a);
-        });
-      };
-      const add = link => {
-        let arr = load().filter(i => i.href !== link.href);
-        arr.unshift({href:link.href, text:link.textContent.trim()});
-        if (arr.length > LIMIT) arr.pop();
-        save(arr); render();
-      };
-      gameLinks.forEach(a => a.addEventListener('click', () => add(a)));
-      render();
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => document.getElementById('webAppPopup').style.display = 'block', 500);
-      document.getElementById('closePopup').addEventListener('click', () =>
-        document.getElementById('webAppPopup').style.display = 'none'
-      );
-
-      document.getElementById('mainHeader').classList.add('animated-in');
-
-      const searchInput   = document.getElementById('gameSearch');
-      const gameLinks     = Array.from(document.querySelectorAll('.game-list a'));
-      const emuLinks      = Array.from(document.querySelectorAll('.emu-list  a'));
-      const emuHeading    = document.getElementById('emuHeading');
-      const recentHeading = document.getElementById('recentHeading');
-      const filter = () => {
-        const term = searchInput.value.trim().toLowerCase();
-        document.body.classList.toggle('searching', term.length > 0);
-        gameLinks.forEach(link =>
-          link.style.display = term && !link.textContent.toLowerCase().includes(term)
-            ? 'none'
-            : 'inline-block'
-        );
-        let showEmu = false;
-        emuLinks.forEach(link => {
-          const match = !term || link.textContent.toLowerCase().includes(term);
-          link.style.display = match ? 'inline-block' : 'none';
-          if (match) showEmu = true;
-        });
-        emuHeading.style.display = showEmu ? 'block' : 'none';
-      };
-      searchInput.addEventListener('input', filter);
-      filter();
-
-      const KEY      = 'recentlyPlayed';
-      const LIMIT    = 10;
-      const wrap     = document.querySelector('.recent-list');
-      const header   = document.getElementById('recentHeading');
-      const gameAnch = Array.from(document.querySelectorAll('.game-list a'));
-      const load  = () => JSON.parse(localStorage.getItem(KEY) || '[]');
-      const save  = arr => localStorage.setItem(KEY, JSON.stringify(arr));
-      const render = () => {
-        const items = load();
-        wrap.innerHTML = '';
-        header.style.display = items.length ? 'block':'none';
-        wrap.style.display = items.length ? 'block':'none';
-        items.forEach(({href,text}) => {
-          const a = document.createElement('a');
-          a.href  = href;
-          a.innerHTML = `<b><p class="link">${text}</p></b>`;
-          wrap.appendChild(a);
-        });
-      };
-      const add = link => {
-        let arr = load().filter(i => i.href !== link.href);
-        arr.unshift({href:link.href, text:link.textContent.trim()});
-        if (arr.length > LIMIT) arr.pop();
-        save(arr); render();
-      };
-      gameAnch.forEach(a => a.addEventListener('click', () => add(a)));
-      render();
-    });
-  </script>
-  <hr style="height:2px;border:0;background:blue">
-  <footer>
-  <a href="dmca.html">DMCA</a>
-</footer>
-
+  <img src="assets/img/archived logos/logo.png" alt="Logo" class="logo">
+  <h1>Goodbye, Github.</h1>
+  <p>
+    Cat-Nitro will be transitioning from Github Pages for hosting, to a private third party hoster.
+    <br>
+    This is due to a numerous amount of issues, but the number one is the lack of ability the Cat-Nitro team has to privatize our own work.
+    <br>
+    This is a very important issue for us, considering how much work was illegally stolen in the recent months from Cat-Nitro.
+    <br>
+    <br>
+    <br>
+    This transition was so smooth, it has already happened before these changes to the primary repository were made.
+    <br>
+    However, I am not perfect, so, expect some.. disapointing downtimes, or just times when the server and primary website are down.
+    <br>
+    <br>
+    <br>
+    <br>
+    Thank you to Github for having a suprisingly good and fast legal team, along with very good free community sources.
+    <br>
+    And most of all, thank you to the user that is reading this.
+    <br>
+    Have a good day.
+    <br>
+    <br>
+  Cat-Nitro Currently Resides <a href="https://crownprincehospital.com">HERE</a>.
+  </p>
+  <h2>Current works, and all past commits authored by me, the Owner (CatMan6112), are protected under the CATL V3.2, and American Copyright Law.</h2>
 </body>
 </html>
