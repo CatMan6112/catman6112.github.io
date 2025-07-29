@@ -67,7 +67,3 @@ Owner may seek injunctive relief, damages, costs of enforcement, and any other r
 ## 7. Governing Law and Venue
 
 This License is governed by the laws of Illinois, USA. Exclusive jurisdiction and venue for any dispute shall lie in the state or federal courts in Madison County, Illinois.
-
----
-
-**Disclaimer:** This revised license is provided for informational purposes only and does not constitute legal advice. Consult a licensed attorney in your jurisdiction to ensure it meets your goals and is enforceable under applicable law.
