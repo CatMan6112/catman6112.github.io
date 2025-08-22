@@ -27,5 +27,5 @@ If you wish to support, please subscribe or donate to the Buy Me A Coffee.
 
 [![Discord](https://img.shields.io/badge/Discord-7289da?style=for-the-badge&logo=Discord&logoColor=white)](https://discord.gg/5rxbeUuEhZ)
 
-[![Buy_Me_A_coffee](https://img.shields.io/badge/Buy_Me_A_coffee-F28729?style=for-the-badge&logo=BuyMeACoffee&logoColor=white)](https://coff.ee/CatMan6112)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G01K45NV)
 
