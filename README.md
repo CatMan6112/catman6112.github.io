@@ -7,8 +7,6 @@ Cat-Nitro was developed by me, a fellow student fed up by their school's harsh f
 
 I Originally created this as a passion project after the original Pepsi Nitro had it's repository moved. It soon spread like wild fire amoungst my peers, causing me to get motivation, making a new feature, people like it, repeat.
 
-(as of 7/14/2025, I reserve the complete rights to the original Pepsi-Nitro code and works, along with the Cat-Nitro works that are under CATL V.1 and V.2 . These rights were bestowed upon me by Mr Doomsday himself.)
-
 The Cat-Nitro Team has begun work on another site, *Project: Freebird*. This is a proxy site based off the Ultraviolet Proxy system.
 
 However, my school, and others', have begun blocking domains, causing me to purchase old expired ones, and repeat this process. This costs me losts of monies. So, support is appreciated. 
